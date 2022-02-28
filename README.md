@@ -1,21 +1,5 @@
-# An rclone bot to upload and transfer to many cloud servers, made by @SamMax009
+# Heroku Deploy
 
-Contact: [Telegram](https://t.me/SamMax009)
-
-    - Upload telegram files to cloud.
-    - Transfer from cloud to cloud.
-    - Renaming of files.
-    - Menu to list clouds from rclone.conf and selection of folders and files.
-    - Progress bar when downloading and uploading.
-
-## Commands for bot(set through @BotFather) 
-- upload - upload to selected cloud 
-- copy - copy from cloud to cloud
-- conf - config rclone and set upload folder 
-- logs - get logs from server
-- clean- clean downloads
-
-    
 ## Deploy With Github Workflow
 
    1- Go to Repository Settings -> Secrets 
