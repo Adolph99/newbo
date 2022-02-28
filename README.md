@@ -8,14 +8,6 @@ Contact: [Telegram](https://t.me/SamMax009)
     - Menu to list clouds from rclone.conf and selection of folders and files.
     - Progress bar when downloading and uploading.
 
-## Variables
-
-    - API_ID
-    - API_HASH
-    - OWNER_ID
-    - BOT_TOKEN
-    - RCLONE_CONFIG
-
 ## Commands for bot(set through @BotFather) 
 - upload - upload to selected cloud 
 - copy - copy from cloud to cloud
@@ -23,38 +15,20 @@ Contact: [Telegram](https://t.me/SamMax009)
 - logs - get logs from server
 - clean- clean downloads
 
-## Secrets for github
-
-    HEROKU_API_KEY
-    HEROKU_APP_NAME
-    HEROKU_EMAIL
     
-    
-## Deploy to heroku
-- Fork the repo.
-- Create app in heroku
-- Go to settings of app / config vars / add all variables
-- connect to github and deploy
-- turn on dynos
+## Deploy With Github Workflow
 
-## Deploy Manual. 
-- sudo apt update 
-- sudo apt install -y python3.8 
-- sudo apt install -y python3-venv 
-- python3 -m venv venv 
-- source venv/bin/activate 
-- pip install -r requirements.txt 
-- curl https://rclone.org/install.sh | bash
-- chmod 777 start.sh 
-- ./start.sh
+   1- Go to Repository Settings -> Secrets 
 
-## Repositories used to develop this bot and credits:
+   2- Add the below Required Variables one by one by clicking New Repository Secret every time.
 
-1- Telethon and Pyrogram.
+    HEROKU_EMAIL: Heroku Account Email 
+    HEROKU_API_KEY: Your Heroku API key
+    HEROKU_APP_NAME: Your Heroku app name (unique)
+    CONFIG_FILE_URL: Copy This in any text editor. Go to https://gist.github.com and paste your config data. Rename the file to config.env and then create secret gist. Click on Raw, copy the link. This will be your CONFIG_FILE_URL.
 
-2- [Conversation-Pyrogram](https://github.com/Ripeey/Conversation-Pyrogram/archive/refs/heads/main.zip)
+   3- After adding all the above Required Variables go to Github Actions tab in your repository. Select Manually Deploy to Heroku workflow.
 
-3- [TorToolkit-Telegram](https://github.com/yash-dk/TorToolkit-Telegram)
+  
 
-4- [EvamariaTG](https://github.com/EvamariaTG/EvaMaria)
 
