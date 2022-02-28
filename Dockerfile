@@ -12,8 +12,12 @@ RUN apt-get -qq install -y git wget curl busybox python3 python3-pip locales
 
 RUN curl https://rclone.org/install.sh | bash
 
+RUN pip3 install --no-cache-dir -r requirements.txt
+
 COPY . .
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN useradd -m rctb
+
+USER rctb
 
 CMD ["bash","start.sh"]
