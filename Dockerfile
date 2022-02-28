@@ -18,8 +18,8 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN useradd -m rctb
+RUN useradd -m SamAgd
 
-USER rctb
+USER SamAgd
 
 CMD ["bash","start.sh"]
