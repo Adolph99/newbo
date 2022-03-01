@@ -3,7 +3,6 @@ import logging
 from os import path as ospath, environ
 from subprocess import run as srun
 from requests import get as rget
-from dotenv import load_dotenv
 
 if ospath.exists('botlog.txt'):
     with open('log.txt', 'r+') as f:
