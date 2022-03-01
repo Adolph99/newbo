@@ -1,5 +1,9 @@
-import logging
+#**************************************************
+# Based on:
+# Source: https://github.com/anasty17/mirror-leech-telegram-bot/blob/master/update.py
+#**************************************************
 
+import logging
 from os import path as ospath, environ
 from subprocess import run as srun
 from requests import get as rget
@@ -24,8 +28,6 @@ try:
 except TypeError:
     logging.error(f"No data received...")
     pass
-
-#load_dotenv('config.env', override=True)
 
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO')
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH')
