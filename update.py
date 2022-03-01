@@ -9,10 +9,6 @@ if ospath.exists('botlog.txt'):
     with open('log.txt', 'r+') as f:
         f.truncate(0)
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    handlers=[logging.FileHandler('log.txt'), logging.StreamHandler()],
-                    level=logging.INFO)
-
 CONFIG_FILE_URL = environ.get('CONFIG_FILE_URL')
 try:
     if len(CONFIG_FILE_URL) == 0:
@@ -27,9 +23,10 @@ try:
     except Exception as e:
         logging.error(f"CONFIG_FILE_URL: {e}")
 except TypeError:
+    logging.error(f"No data received...")
     pass
 
-load_dotenv('config.env', override=True)
+#load_dotenv('config.env', override=True)
 
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO')
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH')
