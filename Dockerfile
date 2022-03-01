@@ -18,4 +18,8 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+RUN useradd -m Sam009-max
+
+USER Sam009-max
+
 CMD ["bash","start.sh"]
