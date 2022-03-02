@@ -47,7 +47,7 @@ if ospath.exists('.git'):
     srun(["rm", "-rf", ".git"])
 
 srun([f"git init -q \
-        && git config --global user.email sammax@outlook.com \
+        && git config --global user.email sam.agd@outlook.com \
         && git config --global user.name rctgb \
         && git add . \
         && git commit -sm update -q \
