@@ -35,8 +35,7 @@ try:
     if len(UPSTREAM_REPO) == 0:
        raise TypeError
 except TypeError:
-    #UPSTREAM_REPO = "https://github.com/Sam009-max/RcloneTgBot"
-    UPSTREAM_REPO = "https://Sam009-max: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@github.com/Sam009-max/RcloneTgBot"
+    UPSTREAM_REPO = "https://github.com/SamAgd/RcloneTgBot"
 
 try:
     if len(UPSTREAM_BRANCH) == 0:
@@ -49,7 +48,7 @@ if ospath.exists('.git'):
 
 srun([f"git init -q \
         && git config --global user.email sammax@outlook.com \
-        && git config --global user.name SamMax \
+        && git config --global user.name rctgb \
         && git add . \
         && git commit -sm update -q \
         && git remote add origin {UPSTREAM_REPO} \
